@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Política de privacidad y tratamiento de datos personales · BulkCreate</title>
+<style>
+:root { color-scheme: light dark; --bg: #fdf7f2; --text: #1f1d2b; --muted: #5b5870; --border: #d9d3e0; --link: #1d6f86; --surface: #ffffff; }
+@media (prefers-color-scheme: dark) { :root { --bg: #15141c; --text: #ecebf2; --muted: #a9a6ba; --border: #3a3848; --link: #7cc7dc; --surface: #1d1c26; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 8px; }
+header strong { font-size: 18px; }
+nav a { margin-left: 12px; }
+a { color: var(--link); }
+.meta { color: var(--muted); font-size: 14px; }
+h1 { font-size: 28px; line-height: 1.25; }
+h2 { font-size: 20px; margin-top: 32px; }
+h3 { font-size: 17px; margin-top: 20px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; background: var(--surface); }
+th, td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 0.92em; }
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 24px; }
+.card { border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; background: var(--surface); }
+.card ul { padding-left: 18px; }
+</style>
+</head>
+<body>
+<main>
+<header><strong>BulkCreate</strong><nav><a href="../index.html">Inicio</a><a href="../en/privacy.html" hreflang="en" lang="en">English</a></nav></header>
+<p class="meta">Versión 1.1.0 — vigente desde el 13 de noviembre de 2026</p>
+<h1 id="politica-de-privacidad-y-tratamiento-de-datos-personales">Política de privacidad y tratamiento de datos personales</h1>
+<p>Esta política explica cómo la aplicación de escritorio <strong>BulkCreate</strong> trata los datos personales, en cumplimiento de la Ley Estatutaria 1581 de 2012 de Colombia y del Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015).</p>
+<h2 id="1-responsable-del-tratamiento">1. Responsable del tratamiento</h2>
+<p>BulkCreate es un programa que se instala y funciona en el equipo de la organización que lo usa. <strong>El responsable del tratamiento es esa organización</strong>, que decide qué datos se cargan y para qué se envían. El desarrollador del programa no recibe, no aloja y no consulta los datos que se tratan en una instalación.</p>
+<p>Sus datos son los que la organización registra en la aplicación:</p>
+<table><thead><tr><th>Dato</th><th>Valor</th></tr></thead><tbody><tr><td>Nombre o razón social</td><td>Se muestra en la aplicación de la organización</td></tr><tr><td>NIT o documento de identidad</td><td>Se muestra en la aplicación de la organización</td></tr><tr><td>Domicilio y dirección</td><td>Se muestra en la aplicación de la organización</td></tr><tr><td>Correo electrónico de contacto</td><td>Se muestra en la aplicación de la organización</td></tr><tr><td>Teléfono de contacto</td><td>Se muestra en la aplicación de la organización</td></tr><tr><td>Área encargada de las consultas</td><td>Se muestra en la aplicación de la organización</td></tr></tbody></table>
+<h2 id="2-alcance-y-definiciones">2. Alcance y definiciones</h2>
+<p>Esta política aplica a todos los datos personales que se tratan con BulkCreate: los de las <strong>personas usuarias</strong> de la aplicación y los de los <strong>destinatarios</strong> que llegan en los archivos de Excel. Los términos <em>titular</em>, <em>tratamiento</em>, <em>responsable</em>, <em>encargado</em>, <em>autorización</em> y <em>base de datos</em> tienen el sentido que les da el artículo 3 de la Ley 1581 de 2012.</p>
+<h2 id="3-datos-que-se-tratan">3. Datos que se tratan</h2>
+<h3 id="3-1-usuarios-de-la-aplicacion">3.1 Usuarios de la aplicación</h3>
+<ul><li>Nombre de usuario, nombre completo y correo electrónico (opcional).</li><li>Rol (Usuario o SuperAdmin), idioma y tema elegidos.</li><li>La contraseña y los códigos de recuperación <strong>no se guardan</strong>: solo se guarda su huella con el algoritmo argon2id, que no permite recuperar el texto original.</li><li>Datos de control de la cuenta: fecha del último ingreso, intentos fallidos y bloqueos temporales.</li></ul>
+<h3 id="3-2-destinatarios-de-los-envios">3.2 Destinatarios de los envíos</h3>
+<ul><li><strong>Nombre</strong> y <strong>número de celular</strong> de cada fila del Excel importado. El número se normaliza al formato internacional E.164.</li><li>La imagen personalizada con el nombre de cada destinatario y el mensaje que se le envía.</li><li>El estado de cada envío: pendiente, enviado, fallido, sin WhatsApp o incierto, con su fecha.</li></ul>
+<p>Del archivo de Excel solo se guardan su nombre y una huella de su contenido. El archivo en sí no se copia.</p>
+<h3 id="3-3-registros-tecnicos-auditoria-y-errores">3.3 Registros técnicos: auditoría y errores</h3>
+<ul><li><strong>Auditoría</strong>: un registro inalterable de las acciones (por ejemplo, ingresos, cambios de usuarios, envíos y exportaciones). <strong>La auditoría no guarda datos personales</strong>: identifica a quien actuó con un identificador interno, y los intentos de ingreso con un usuario inexistente quedan con un seudónimo (una huella con una clave propia de la instalación). Del número de WhatsApp vinculado solo guarda los cuatro últimos dígitos.</li><li><strong>Registro de errores</strong>: mensajes técnicos de fallas con el módulo, la fecha y el identificador interno del usuario que estaba en sesión. Antes de guardarse se limpian de nombres, celulares y secretos.</li></ul>
+<h2 id="4-finalidades-del-tratamiento">4. Finalidades del tratamiento</h2>
+<p>Los datos se tratan solo para estas finalidades:</p>
+<ol><li>Permitir el ingreso seguro de las personas usuarias y controlar qué puede hacer cada rol.</li><li>Generar imágenes personalizadas con el nombre de cada destinatario.</li><li>Enviar esas imágenes, con un mensaje opcional, al celular de cada destinatario por WhatsApp.</li><li>Mostrar el estado de los envíos y elaborar reportes de la operación.</li><li>Mantener la seguridad, la trazabilidad y el diagnóstico de fallas de la aplicación.</li></ol>
+<p>Los datos <strong>no</strong> se venden, no se usan para publicidad de terceros y no se envían a servicios de análisis o telemetría.</p>
+<h2 id="5-donde-se-guardan-los-datos-y-medidas-de-seguridad">5. Dónde se guardan los datos y medidas de seguridad</h2>
+<ul><li><strong>Todo se guarda en el equipo</strong> donde está instalada la aplicación, en la carpeta de datos del usuario de Windows (<code>%APPDATA%/BulkCreate</code>): la base de datos SQLite, las plantillas, las imágenes de cada lote, la sesión de WhatsApp y los registros. No hay servidor ni nube del desarrollador.</li><li>Acceso con usuario y contraseña, bloqueo tras varios intentos fallidos y cierre de sesión por inactividad.</li><li>Permisos por rol: cada persona usuaria ve y modifica solo lo que su rol le permite.</li><li>Auditoría inalterable con verificación de integridad por cadena de huellas.</li><li>Respaldos cifrados con AES-256-GCM en la carpeta que elija la organización.</li><li>La organización es responsable de proteger el equipo (cuenta de Windows, antivirus y cifrado del disco).</li></ul>
+<h2 id="6-terceros-y-transferencia-internacional">6. Terceros y transferencia internacional</h2>
+<ul><li><strong>WhatsApp (Meta Platforms)</strong>: para enviar los mensajes, la aplicación usa WhatsApp Web con el número que vincule la organización. El nombre, el celular, la imagen y el mensaje de cada destinatario pasan por los servidores de WhatsApp, que pueden estar fuera de Colombia, y Meta los trata según sus propios términos y su política de privacidad. Esta transferencia la hace la organización con su propia cuenta de WhatsApp.</li><li><strong>Microsoft Edge</strong>: la aplicación usa el navegador Edge instalado en el equipo para abrir WhatsApp Web.</li><li><strong>Actualizaciones</strong>: si se activa la actualización automática, la aplicación consulta GitHub para saber si hay una versión nueva. Esa consulta no incluye datos personales.</li></ul>
+<p>Fuera de estos casos, los datos no se comparten con terceros, salvo por orden de una autoridad competente.</p>
+<h2 id="7-autorizacion">7. Autorización</h2>
+<ul><li>Las personas usuarias aceptan esta política la primera vez que ingresan y cada vez que cambia su versión. La aplicación registra esa aceptación.</li><li><strong>La organización debe obtener la autorización previa, expresa e informada de cada destinatario</strong> antes de cargar sus datos y enviarle mensajes, y debe poder demostrarla si se la piden. BulkCreate no recoge esa autorización por la organización.</li></ul>
+<h2 id="8-derechos-de-los-titulares">8. Derechos de los titulares</h2>
+<p>Según el artículo 8 de la Ley 1581 de 2012, todo titular tiene derecho a:</p>
+<ol><li>Conocer, actualizar y rectificar sus datos personales.</li><li>Pedir prueba de la autorización que dio.</li><li>Ser informado del uso que se ha dado a sus datos.</li><li>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la ley.</li><li>Revocar la autorización y pedir la supresión de sus datos cuando no se respeten los principios, derechos y garantías de la ley.</li><li>Acceder gratis a sus datos personales.</li></ol>
+<h2 id="9-procedimiento-para-consultas-reclamos-y-solicitudes">9. Procedimiento para consultas, reclamos y solicitudes</h2>
+<ul><li><strong>Personas usuarias</strong>: desde la aplicación pueden <strong>exportar sus datos</strong> (derecho de acceso) en un archivo JSON/ZIP y <strong>solicitar el borrado de su cuenta</strong>. Para corregir sus datos pueden pedirlo al SuperAdmin de la organización.</li><li><strong>Destinatarios y cualquier titular</strong>: deben escribir al correo de contacto del responsable (sección 1) con su nombre, su número de celular, la petición y un medio para responderles.</li><li><strong>Consultas</strong>: se responden en un máximo de <strong>10 días hábiles</strong>, prorrogables por 5 días hábiles más informando el motivo (artículo 14 de la Ley 1581).</li><li><strong>Reclamos</strong> (corrección, actualización, supresión o revocatoria): se responden en un máximo de <strong>15 días hábiles</strong>, prorrogables por 8 días hábiles más informando el motivo. Si el reclamo está incompleto, se pide completarlo en 5 días hábiles; si pasan 2 meses sin respuesta, se entiende que el titular desistió (artículo 15 de la Ley 1581).</li><li>Si la respuesta no le satisface, el titular puede acudir a la SIC después de agotar este trámite.</li></ul>
+<h2 id="10-borrado-de-datos">10. Borrado de datos</h2>
+<h3 id="10-1-borrado-de-la-cuenta-de-un-usuario">10.1 Borrado de la cuenta de un usuario</h3>
+<ol><li>La persona usuaria pide el borrado con el botón <strong>«Solicitar borrado de cuenta»</strong>.</li><li>El SuperAdmin de la organización revisa y aprueba o rechaza la solicitud.</li><li>Al aprobarla, la cuenta se desactiva y su nombre de usuario, nombre completo y correo se reemplazan por valores anónimos. Desde ese momento, los reportes y la auditoría muestran «anonimizado» en lugar de la persona.</li></ol>
+<h3 id="10-2-borrado-de-los-datos-de-destinatarios">10.2 Borrado de los datos de destinatarios</h3>
+<p>El dueño de un lote puede borrar los datos de sus destinatarios (nombres, celulares e imágenes). La organización también puede fijar un plazo de conservación para que se borren al vencer. Un destinatario que quiera que se borren sus datos debe pedirlo al responsable (sección 9).</p>
+<h3 id="10-3-lo-que-no-se-borra-y-por-que">10.3 Lo que no se borra y por qué</h3>
+<ul><li>La <strong>auditoría</strong> no se puede modificar ni borrar, porque es la prueba de lo que pasó en la aplicación. Como no guarda datos personales (sección 3.3), anonimizar una cuenta no la altera.</li><li>Las cifras agregadas de los reportes (totales de envíos, por ejemplo) se conservan sin datos personales.</li><li>Los <strong>respaldos</strong> anteriores al borrado conservan los datos hasta que se reemplazan según su plazo de retención.</li><li>Los mensajes que ya se enviaron quedan en WhatsApp, en el teléfono del destinatario y en los servidores de Meta, fuera del control de BulkCreate.</li></ul>
+<h2 id="11-conservacion-de-los-datos">11. Conservación de los datos</h2>
+<ul><li>Cuentas de usuario: mientras estén activas o hasta que se apruebe su borrado.</li><li>Datos de destinatarios: hasta que el dueño borre el lote o venza el plazo de conservación que fije la organización.</li><li>Registro de errores: 90 días por defecto; el SuperAdmin puede cambiar ese plazo.</li><li>Auditoría: mientras exista la instalación, porque es inalterable y no contiene datos personales.</li><li>Respaldos: los 14 más recientes por defecto.</li></ul>
+<h2 id="12-menores-de-edad-y-datos-sensibles">12. Menores de edad y datos sensibles</h2>
+<p>BulkCreate no está diseñado para tratar datos sensibles ni datos de niños, niñas o adolescentes. Si la organización necesita hacerlo, debe cumplir los requisitos especiales de los artículos 5, 6 y 7 de la Ley 1581 de 2012.</p>
+<h2 id="13-cambios-a-esta-politica">13. Cambios a esta política</h2>
+<p>Cada cambio de esta política tendrá una versión y una fecha nuevas. Cuando cambie la versión, la aplicación pedirá a las personas usuarias que la acepten otra vez antes de seguir usándola. La versión también cambia cuando la organización actualiza los datos del responsable de la sección 1.</p>
+<h2 id="14-vigencia">14. Vigencia</h2>
+<p>Esta política rige desde el <strong>5 de noviembre de 2026</strong>. Las bases de datos estarán vigentes mientras la organización use BulkCreate para las finalidades descritas en la sección 4.</p>
+</main>
+</body>
+</html>
