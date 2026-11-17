@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Privacy and Personal Data Processing Policy · BulkCreate</title>
+<style>
+:root { color-scheme: light dark; --bg: #fdf7f2; --text: #1f1d2b; --muted: #5b5870; --border: #d9d3e0; --link: #1d6f86; --surface: #ffffff; }
+@media (prefers-color-scheme: dark) { :root { --bg: #15141c; --text: #ecebf2; --muted: #a9a6ba; --border: #3a3848; --link: #7cc7dc; --surface: #1d1c26; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 8px; }
+header strong { font-size: 18px; }
+nav a { margin-left: 12px; }
+a { color: var(--link); }
+.meta { color: var(--muted); font-size: 14px; }
+h1 { font-size: 28px; line-height: 1.25; }
+h2 { font-size: 20px; margin-top: 32px; }
+h3 { font-size: 17px; margin-top: 20px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; background: var(--surface); }
+th, td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 0.92em; }
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 24px; }
+.card { border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; background: var(--surface); }
+.card ul { padding-left: 18px; }
+</style>
+</head>
+<body>
+<main>
+<header><strong>BulkCreate</strong><nav><a href="../index.html">Home</a><a href="../es/privacidad.html" hreflang="es" lang="es">Español</a></nav></header>
+<p class="meta">Version 1.1.0 — effective November 13, 2026</p>
+<h1 id="privacy-and-personal-data-processing-policy">Privacy and Personal Data Processing Policy</h1>
+<p>This policy explains how the <strong>BulkCreate</strong> desktop application processes personal data, in compliance with Colombia&#39;s Statutory Law 1581 of 2012 and Decree 1377 of 2013 (compiled in Decree 1074 of 2015). The Spanish version prevails if the two versions differ.</p>
+<h2 id="1-data-controller">1. Data controller</h2>
+<p>BulkCreate is a program installed and run on the computer of the organization that uses it. <strong>The data controller is that organization</strong>, which decides what data is loaded and why it is sent. The developer of the program does not receive, host or access the data processed in an installation.</p>
+<p>Its details are the ones the organization records in the application:</p>
+<table><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Name or company name</td><td>Shown in the organization&#39;s application</td></tr><tr><td>Tax ID or identity document</td><td>Shown in the organization&#39;s application</td></tr><tr><td>Registered address</td><td>Shown in the organization&#39;s application</td></tr><tr><td>Contact email</td><td>Shown in the organization&#39;s application</td></tr><tr><td>Contact phone</td><td>Shown in the organization&#39;s application</td></tr><tr><td>Area in charge of requests</td><td>Shown in the organization&#39;s application</td></tr></tbody></table>
+<h2 id="2-scope-and-definitions">2. Scope and definitions</h2>
+<p>This policy applies to all personal data processed with BulkCreate: the data of the application&#39;s <strong>users</strong> and the data of the <strong>recipients</strong> contained in the Excel files. The terms <em>data subject</em>, <em>processing</em>, <em>controller</em>, <em>processor</em>, <em>authorization</em> and <em>database</em> have the meaning given in article 3 of Law 1581 of 2012.</p>
+<h2 id="3-data-processed">3. Data processed</h2>
+<h3 id="3-1-application-users">3.1 Application users</h3>
+<ul><li>Username, full name and email address (optional).</li><li>Role (User or SuperAdmin), chosen language and theme.</li><li>Passwords and recovery codes <strong>are not stored</strong>: only their argon2id hash is stored, which does not allow the original text to be recovered.</li><li>Account control data: last sign-in date, failed attempts and temporary lockouts.</li></ul>
+<h3 id="3-2-message-recipients">3.2 Message recipients</h3>
+<ul><li><strong>Name</strong> and <strong>mobile number</strong> from each row of the imported Excel file. The number is normalized to the E.164 international format.</li><li>The personalized image with each recipient&#39;s name and the message sent to them.</li><li>The status of each send: pending, sent, failed, no WhatsApp or uncertain, with its date.</li></ul>
+<p>Only the Excel file&#39;s name and a hash of its content are stored. The file itself is not copied.</p>
+<h3 id="3-3-technical-records-audit-and-errors">3.3 Technical records: audit and errors</h3>
+<ul><li><strong>Audit log</strong>: a tamper-proof record of actions (for example sign-ins, user changes, sends and exports). <strong>The audit log does not store personal data</strong>: it identifies who acted by an internal identifier, and sign-in attempts with a non-existent username are recorded as a pseudonym (a keyed hash specific to the installation). For the linked WhatsApp number, it stores only the last four digits.</li><li><strong>Error log</strong>: technical failure messages with the module, the date and the internal identifier of the signed-in user. Names, mobile numbers and secrets are removed before they are stored.</li></ul>
+<h2 id="4-purposes-of-processing">4. Purposes of processing</h2>
+<p>Data is processed only for these purposes:</p>
+<ol><li>To allow users to sign in securely and to control what each role can do.</li><li>To generate personalized images with each recipient&#39;s name.</li><li>To send those images, with an optional message, to each recipient&#39;s mobile number through WhatsApp.</li><li>To show the status of the sends and produce operational reports.</li><li>To maintain the security, traceability and fault diagnosis of the application.</li></ol>
+<p>Data is <strong>not</strong> sold, not used for third-party advertising and not sent to analytics or telemetry services.</p>
+<h2 id="5-where-data-is-stored-and-security-measures">5. Where data is stored and security measures</h2>
+<ul><li><strong>Everything is stored on the computer</strong> where the application is installed, in the Windows user data folder (<code>%APPDATA%/BulkCreate</code>): the SQLite database, the templates, the images of each batch, the WhatsApp session and the logs. There is no developer server or cloud.</li><li>Access with username and password, lockout after several failed attempts and sign-out after inactivity.</li><li>Role-based permissions: each user sees and changes only what their role allows.</li><li>Tamper-proof audit log with integrity verification through a hash chain.</li><li>Backups encrypted with AES-256-GCM in the folder chosen by the organization.</li><li>The organization is responsible for protecting the computer (Windows account, antivirus and disk encryption).</li></ul>
+<h2 id="6-third-parties-and-international-transfer">6. Third parties and international transfer</h2>
+<ul><li><strong>WhatsApp (Meta Platforms)</strong>: to send messages, the application uses WhatsApp Web with the number linked by the organization. Each recipient&#39;s name, mobile number, image and message pass through WhatsApp&#39;s servers, which may be outside Colombia, and Meta processes them under its own terms and privacy policy. The organization makes this transfer with its own WhatsApp account.</li><li><strong>Microsoft Edge</strong>: the application uses the Edge browser installed on the computer to open WhatsApp Web.</li><li><strong>Updates</strong>: if automatic updates are enabled, the application checks GitHub for a new version. That check does not include personal data.</li></ul>
+<p>Outside these cases, data is not shared with third parties, except by order of a competent authority.</p>
+<h2 id="7-authorization">7. Authorization</h2>
+<ul><li>Users accept this policy the first time they sign in and each time its version changes. The application records that acceptance.</li><li><strong>The organization must obtain each recipient&#39;s prior, express and informed authorization</strong> before loading their data and sending them messages, and must be able to prove it if asked. BulkCreate does not collect that authorization on the organization&#39;s behalf.</li></ul>
+<h2 id="8-rights-of-data-subjects">8. Rights of data subjects</h2>
+<p>Under article 8 of Law 1581 of 2012, every data subject has the right to:</p>
+<ol><li>Know, update and correct their personal data.</li><li>Request proof of the authorization they gave.</li><li>Be informed of how their data has been used.</li><li>File complaints with the Superintendence of Industry and Commerce (SIC) for violations of the law.</li><li>Revoke the authorization and request the deletion of their data when the principles, rights and guarantees of the law are not respected.</li><li>Access their personal data free of charge.</li></ol>
+<h2 id="9-procedure-for-inquiries-claims-and-requests">9. Procedure for inquiries, claims and requests</h2>
+<ul><li><strong>Users</strong>: from the application they can <strong>export their data</strong> (right of access) as a JSON/ZIP file and <strong>request the deletion of their account</strong>. To correct their data, they can ask the organization&#39;s SuperAdmin.</li><li><strong>Recipients and any data subject</strong>: they must write to the controller&#39;s contact email (section 1) with their name, their mobile number, the request and a way to reply to them.</li><li><strong>Inquiries</strong>: answered within <strong>10 business days</strong>, extendable by 5 more business days with the reason stated (article 14 of Law 1581).</li><li><strong>Claims</strong> (correction, update, deletion or revocation): answered within <strong>15 business days</strong>, extendable by 8 more business days with the reason stated. If a claim is incomplete, the data subject is asked to complete it within 5 business days; if 2 months pass without a reply, the claim is considered withdrawn (article 15 of Law 1581).</li><li>If the answer is not satisfactory, the data subject may go to the SIC after completing this procedure.</li></ul>
+<h2 id="10-data-deletion">10. Data deletion</h2>
+<h3 id="10-1-deleting-a-user-account">10.1 Deleting a user account</h3>
+<ol><li>The user requests deletion with the <strong>&quot;Request account deletion&quot;</strong> button.</li><li>The organization&#39;s SuperAdmin reviews and approves or rejects the request.</li><li>Once approved, the account is deactivated and its username, full name and email are replaced with anonymous values. From then on, reports and the audit log show &quot;anonymized&quot; instead of the person.</li></ol>
+<h3 id="10-2-deleting-recipient-data">10.2 Deleting recipient data</h3>
+<p>The owner of a batch can delete its recipients&#39; data (names, mobile numbers and images). The organization can also set a retention period so that the data is deleted when it expires. A recipient who wants their data deleted must ask the controller (section 9).</p>
+<h3 id="10-3-what-is-not-deleted-and-why">10.3 What is not deleted and why</h3>
+<ul><li>The <strong>audit log</strong> cannot be changed or deleted, because it is the proof of what happened in the application. Since it does not store personal data (section 3.3), anonymizing an account does not alter it.</li><li>Aggregated report figures (send totals, for example) are kept without personal data.</li><li><strong>Backups</strong> made before the deletion keep the data until they are replaced according to their retention period.</li><li>Messages already sent remain in WhatsApp, on the recipient&#39;s phone and on Meta&#39;s servers, outside BulkCreate&#39;s control.</li></ul>
+<h2 id="11-data-retention">11. Data retention</h2>
+<ul><li>User accounts: while active or until their deletion is approved.</li><li>Recipient data: until the owner deletes the batch or the retention period set by the organization expires.</li><li>Error log: 90 days by default; the SuperAdmin can change that period.</li><li>Audit log: for as long as the installation exists, because it is tamper-proof and contains no personal data.</li><li>Backups: the 14 most recent by default.</li></ul>
+<h2 id="12-minors-and-sensitive-data">12. Minors and sensitive data</h2>
+<p>BulkCreate is not designed to process sensitive data or data of children or adolescents. If the organization needs to do so, it must meet the special requirements of articles 5, 6 and 7 of Law 1581 of 2012.</p>
+<h2 id="13-changes-to-this-policy">13. Changes to this policy</h2>
+<p>Each change to this policy will have a new version and date. When the version changes, the application will ask users to accept it again before they continue using it. The version also changes when the organization updates the data controller details in section 1.</p>
+<h2 id="14-effective-date">14. Effective date</h2>
+<p>This policy is effective from <strong>November 5, 2026</strong>. The databases will remain in force for as long as the organization uses BulkCreate for the purposes described in section 4.</p>
+</main>
+</body>
+</html>
